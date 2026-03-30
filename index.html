@@ -1368,28 +1368,28 @@
             <h2 class="section-title">Get Your Free Growth Audit</h2>
             <p class="section-subtitle" style="margin:0 auto;">Fill in your details and we'll send you a custom growth plan within 48 hours.</p>
         </div>
-        <form class="fade-up" onsubmit="handleSubmit(event)" style="display:flex; flex-direction:column; gap:16px;">
+        <form class="fade-up" action="https://formspree.io/f/xjgpwqvo" method="POST" onsubmit="handleSubmit(event)" style="display:flex; flex-direction:column; gap:16px;">
             <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
                 <div>
                     <label style="display:block; font-size:14px; font-weight:600; margin-bottom:6px; color:var(--gray-700);">First Name *</label>
-                    <input type="text" required placeholder="John" style="width:100%; padding:14px 16px; border:1px solid var(--gray-200); border-radius:10px; font-size:15px; font-family:inherit; outline:none; transition:border 0.2s;" onfocus="this.style.borderColor='var(--black)'" onblur="this.style.borderColor='var(--gray-200)'">
+                    <input type="text" name="first_name" required placeholder="John" style="width:100%; padding:14px 16px; border:1px solid var(--gray-200); border-radius:10px; font-size:15px; font-family:inherit; outline:none; transition:border 0.2s;" onfocus="this.style.borderColor='var(--black)'" onblur="this.style.borderColor='var(--gray-200)'">
                 </div>
                 <div>
                     <label style="display:block; font-size:14px; font-weight:600; margin-bottom:6px; color:var(--gray-700);">Last Name *</label>
-                    <input type="text" required placeholder="Smith" style="width:100%; padding:14px 16px; border:1px solid var(--gray-200); border-radius:10px; font-size:15px; font-family:inherit; outline:none; transition:border 0.2s;" onfocus="this.style.borderColor='var(--black)'" onblur="this.style.borderColor='var(--gray-200)'">
+                    <input type="text" name="last_name" required placeholder="Smith" style="width:100%; padding:14px 16px; border:1px solid var(--gray-200); border-radius:10px; font-size:15px; font-family:inherit; outline:none; transition:border 0.2s;" onfocus="this.style.borderColor='var(--black)'" onblur="this.style.borderColor='var(--gray-200)'">
                 </div>
             </div>
             <div>
                 <label style="display:block; font-size:14px; font-weight:600; margin-bottom:6px; color:var(--gray-700);">Email *</label>
-                <input type="email" required placeholder="john@yourbrand.com" style="width:100%; padding:14px 16px; border:1px solid var(--gray-200); border-radius:10px; font-size:15px; font-family:inherit; outline:none; transition:border 0.2s;" onfocus="this.style.borderColor='var(--black)'" onblur="this.style.borderColor='var(--gray-200)'">
+                <input type="email" name="email" required placeholder="john@yourbrand.com" style="width:100%; padding:14px 16px; border:1px solid var(--gray-200); border-radius:10px; font-size:15px; font-family:inherit; outline:none; transition:border 0.2s;" onfocus="this.style.borderColor='var(--black)'" onblur="this.style.borderColor='var(--gray-200)'">
             </div>
             <div>
                 <label style="display:block; font-size:14px; font-weight:600; margin-bottom:6px; color:var(--gray-700);">Website URL *</label>
-                <input type="url" required placeholder="https://yourbrand.com" style="width:100%; padding:14px 16px; border:1px solid var(--gray-200); border-radius:10px; font-size:15px; font-family:inherit; outline:none; transition:border 0.2s;" onfocus="this.style.borderColor='var(--black)'" onblur="this.style.borderColor='var(--gray-200)'">
+                <input type="url" name="website" required placeholder="https://yourbrand.com" style="width:100%; padding:14px 16px; border:1px solid var(--gray-200); border-radius:10px; font-size:15px; font-family:inherit; outline:none; transition:border 0.2s;" onfocus="this.style.borderColor='var(--black)'" onblur="this.style.borderColor='var(--gray-200)'">
             </div>
             <div>
                 <label style="display:block; font-size:14px; font-weight:600; margin-bottom:6px; color:var(--gray-700);">Monthly Revenue *</label>
-                <select required style="width:100%; padding:14px 16px; border:1px solid var(--gray-200); border-radius:10px; font-size:15px; font-family:inherit; outline:none; background:white; cursor:pointer; transition:border 0.2s;" onfocus="this.style.borderColor='var(--black)'" onblur="this.style.borderColor='var(--gray-200)'">
+                <select name="monthly_revenue" required style="width:100%; padding:14px 16px; border:1px solid var(--gray-200); border-radius:10px; font-size:15px; font-family:inherit; outline:none; background:white; cursor:pointer; transition:border 0.2s;" onfocus="this.style.borderColor='var(--black)'" onblur="this.style.borderColor='var(--gray-200)'">
                     <option value="" disabled selected>Select your monthly revenue</option>
                     <option>Under $10K/mo</option>
                     <option>$10K - $50K/mo</option>
@@ -1400,7 +1400,7 @@
             </div>
             <div>
                 <label style="display:block; font-size:14px; font-weight:600; margin-bottom:6px; color:var(--gray-700);">What's your biggest growth challenge?</label>
-                <textarea rows="3" placeholder="E.g., struggling to scale Meta Ads profitably..." style="width:100%; padding:14px 16px; border:1px solid var(--gray-200); border-radius:10px; font-size:15px; font-family:inherit; outline:none; resize:vertical; transition:border 0.2s;" onfocus="this.style.borderColor='var(--black)'" onblur="this.style.borderColor='var(--gray-200)'"></textarea>
+                <textarea name="challenge" rows="3" placeholder="E.g., struggling to scale Meta Ads profitably..." style="width:100%; padding:14px 16px; border:1px solid var(--gray-200); border-radius:10px; font-size:15px; font-family:inherit; outline:none; resize:vertical; transition:border 0.2s;" onfocus="this.style.borderColor='var(--black)'" onblur="this.style.borderColor='var(--gray-200)'"></textarea>
             </div>
             <button type="submit" class="btn btn-primary" style="margin-top:8px; width:100%;">
                 Get My Free Growth Audit <span class="btn-arrow">&rarr;</span>
@@ -1493,16 +1493,34 @@
     // Form submission
     function handleSubmit(e) {
         e.preventDefault();
-        const btn = e.target.querySelector('button[type="submit"]');
-        btn.innerHTML = '<span style="display:inline-flex;align-items:center;gap:8px;">&#10003; Audit Request Sent!</span>';
-        btn.style.background = '#22c55e';
+        const form = e.target;
+        const btn = form.querySelector('button[type="submit"]');
         btn.disabled = true;
-        setTimeout(() => {
-            btn.innerHTML = 'Get My Free Growth Audit <span class="btn-arrow">&rarr;</span>';
-            btn.style.background = '';
+        btn.innerHTML = 'Sending...';
+        fetch(form.action, {
+            method: 'POST',
+            body: new FormData(form),
+            headers: { 'Accept': 'application/json' }
+        }).then(r => {
+            if (r.ok) {
+                btn.innerHTML = '<span style="display:inline-flex;align-items:center;gap:8px;">&#10003; Audit Request Sent!</span>';
+                btn.style.background = '#22c55e';
+                form.reset();
+                setTimeout(() => {
+                    btn.innerHTML = 'Get My Free Growth Audit <span class="btn-arrow">&rarr;</span>';
+                    btn.style.background = '';
+                    btn.disabled = false;
+                }, 3000);
+            } else {
+                btn.innerHTML = 'Something went wrong. Try again.';
+                btn.style.background = '#ef4444';
+                btn.disabled = false;
+            }
+        }).catch(() => {
+            btn.innerHTML = 'Something went wrong. Try again.';
+            btn.style.background = '#ef4444';
             btn.disabled = false;
-            e.target.reset();
-        }, 3000);
+        });
     }
 </script>
 
