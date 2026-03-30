@@ -1,0 +1,1503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcomGrowth Agency | Scale Your Ecommerce Revenue</title>
+    <meta name="description" content="EcomGrowth Agency helps ecommerce brands scale revenue with data-driven paid ads, email marketing, and CRO. Book your free growth audit today.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --black: #0a0a0a;
+            --dark: #1a1a1a;
+            --gray-900: #111111;
+            --gray-800: #222222;
+            --gray-700: #333333;
+            --gray-600: #555555;
+            --gray-500: #777777;
+            --gray-400: #999999;
+            --gray-300: #cccccc;
+            --gray-200: #e5e5e5;
+            --gray-100: #f5f5f5;
+            --white: #ffffff;
+            --accent: #0a0a0a;
+            --accent-hover: #333333;
+            --green: #22c55e;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--black);
+            background: var(--white);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ─── UTILITY ─── */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        .section { padding: 100px 0; }
+        .section-alt { background: var(--gray-100); }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--gray-100);
+            border: 1px solid var(--gray-200);
+            border-radius: 100px;
+            padding: 6px 16px;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--gray-600);
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+        }
+
+        .badge-dot {
+            width: 6px; height: 6px;
+            background: var(--green);
+            border-radius: 50%;
+            animation: pulse-dot 2s infinite;
+        }
+
+        @keyframes pulse-dot {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
+        }
+
+        h1, h2, h3, h4 { line-height: 1.15; letter-spacing: -0.02em; }
+
+        .section-label {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--gray-500);
+            margin-bottom: 16px;
+        }
+
+        .section-title {
+            font-size: clamp(32px, 4vw, 48px);
+            font-weight: 800;
+            color: var(--black);
+            margin-bottom: 20px;
+        }
+
+        .section-subtitle {
+            font-size: 18px;
+            color: var(--gray-600);
+            max-width: 600px;
+            line-height: 1.7;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 16px 32px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+            transition: all 0.2s ease;
+        }
+
+        .btn-primary {
+            background: var(--black);
+            color: var(--white);
+            box-shadow: 0 1px 2px rgba(0,0,0,0.1), 0 4px 12px rgba(0,0,0,0.15);
+        }
+        .btn-primary:hover {
+            background: var(--accent-hover);
+            transform: translateY(-1px);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1), 0 8px 24px rgba(0,0,0,0.2);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--black);
+            border: 2px solid var(--gray-200);
+        }
+        .btn-outline:hover {
+            border-color: var(--black);
+            background: var(--gray-100);
+        }
+
+        .btn-arrow {
+            transition: transform 0.2s;
+        }
+        .btn:hover .btn-arrow { transform: translateX(3px); }
+
+        /* ─── GLOSSY BLACK ICONS ─── */
+        .icon-wrap {
+            width: 56px; height: 56px;
+            border-radius: 16px;
+            background: linear-gradient(145deg, #2a2a2a, #0a0a0a);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3), inset 0 1px 1px rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .icon-wrap svg {
+            width: 24px; height: 24px;
+            stroke: var(--white);
+            stroke-width: 2;
+            fill: none;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .icon-wrap-lg {
+            width: 64px; height: 64px;
+            border-radius: 20px;
+        }
+        .icon-wrap-lg svg { width: 28px; height: 28px; }
+
+        /* ─── NAV ─── */
+        .nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1000;
+            background: rgba(255,255,255,0.92);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--gray-200);
+            transition: box-shadow 0.3s;
+        }
+        .nav.scrolled { box-shadow: 0 1px 12px rgba(0,0,0,0.06); }
+
+        .nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 72px;
+        }
+
+        .nav-logo {
+            font-size: 20px;
+            font-weight: 800;
+            color: var(--black);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            letter-spacing: -0.02em;
+        }
+
+        .nav-logo-icon {
+            width: 36px; height: 36px;
+            background: linear-gradient(145deg, #2a2a2a, #0a0a0a);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.25), inset 0 1px 1px rgba(255,255,255,0.1);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            list-style: none;
+        }
+        .nav-links a {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--gray-600);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover { color: var(--black); }
+
+        .nav-cta {
+            padding: 10px 24px !important;
+            font-size: 14px !important;
+            border-radius: 10px !important;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+        }
+        .mobile-menu-btn span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--black);
+            margin: 5px 0;
+            transition: 0.3s;
+        }
+
+        /* ─── HERO ─── */
+        .hero {
+            padding: 160px 0 100px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(0,0,0,0.02) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-badge { margin-bottom: 32px; }
+
+        .hero h1 {
+            font-size: clamp(40px, 6vw, 72px);
+            font-weight: 900;
+            line-height: 1.05;
+            letter-spacing: -0.03em;
+            margin-bottom: 24px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-highlight {
+            position: relative;
+            display: inline-block;
+        }
+        .hero-highlight::after {
+            content: '';
+            position: absolute;
+            bottom: 4px; left: -4px; right: -4px;
+            height: 12px;
+            background: rgba(0,0,0,0.08);
+            border-radius: 4px;
+            z-index: -1;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: var(--gray-600);
+            max-width: 560px;
+            margin: 0 auto 40px;
+            line-height: 1.7;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .hero-proof {
+            margin-top: 56px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .hero-proof-avatars {
+            display: flex;
+        }
+        .hero-proof-avatars span {
+            width: 40px; height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(145deg, #2a2a2a, #0a0a0a);
+            border: 3px solid var(--white);
+            margin-left: -10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            color: white;
+            font-weight: 600;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+        }
+        .hero-proof-avatars span:first-child { margin-left: 0; }
+
+        .hero-proof-text {
+            font-size: 14px;
+            color: var(--gray-600);
+        }
+        .hero-proof-text strong {
+            color: var(--black);
+        }
+
+        .hero-stars {
+            color: #fbbf24;
+            font-size: 16px;
+            letter-spacing: 2px;
+        }
+
+        /* ─── LOGOS BAR ─── */
+        .logos {
+            padding: 60px 0;
+            border-top: 1px solid var(--gray-200);
+            border-bottom: 1px solid var(--gray-200);
+        }
+        .logos-label {
+            text-align: center;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--gray-400);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 32px;
+        }
+        .logos-grid {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 56px;
+            flex-wrap: wrap;
+            opacity: 0.5;
+        }
+        .logos-grid span {
+            font-size: 20px;
+            font-weight: 800;
+            color: var(--gray-700);
+            letter-spacing: -0.02em;
+        }
+
+        /* ─── STATS BAR ─── */
+        .stats {
+            padding: 80px 0;
+            background: var(--black);
+            color: var(--white);
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            text-align: center;
+        }
+        .stat-number {
+            font-size: clamp(36px, 5vw, 56px);
+            font-weight: 900;
+            letter-spacing: -0.03em;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+        .stat-label {
+            font-size: 14px;
+            color: rgba(255,255,255,0.6);
+            font-weight: 500;
+        }
+
+        /* ─── SERVICES ─── */
+        .services-header {
+            text-align: center;
+            margin-bottom: 64px;
+        }
+        .services-header .section-subtitle {
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .service-card {
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: 20px;
+            padding: 40px 32px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--black), var(--gray-600));
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .service-card:hover {
+            border-color: var(--gray-300);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+            transform: translateY(-2px);
+        }
+        .service-card:hover::before { opacity: 1; }
+
+        .service-card .icon-wrap { margin-bottom: 24px; }
+
+        .service-card h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            font-size: 15px;
+            color: var(--gray-600);
+            line-height: 1.7;
+        }
+
+        .service-card ul {
+            list-style: none;
+            margin-top: 20px;
+        }
+        .service-card ul li {
+            font-size: 14px;
+            color: var(--gray-600);
+            padding: 6px 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .service-card ul li::before {
+            content: '';
+            width: 5px; height: 5px;
+            background: var(--black);
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        /* ─── PROCESS ─── */
+        .process-header {
+            text-align: center;
+            margin-bottom: 64px;
+        }
+        .process-header .section-subtitle { margin: 0 auto; }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+            position: relative;
+        }
+
+        .process-step {
+            text-align: center;
+            position: relative;
+        }
+
+        .process-number {
+            width: 48px; height: 48px;
+            border-radius: 50%;
+            background: linear-gradient(145deg, #2a2a2a, #0a0a0a);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3), inset 0 1px 1px rgba(255,255,255,0.1);
+            color: var(--white);
+            font-weight: 800;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+
+        .process-step h4 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .process-step p {
+            font-size: 14px;
+            color: var(--gray-600);
+            line-height: 1.6;
+        }
+
+        /* ─── RESULTS / CASE STUDIES ─── */
+        .results-header {
+            text-align: center;
+            margin-bottom: 64px;
+        }
+        .results-header .section-subtitle { margin: 0 auto; }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .result-card {
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: 20px;
+            padding: 40px 32px;
+            transition: all 0.3s;
+        }
+        .result-card:hover {
+            box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+            transform: translateY(-2px);
+        }
+
+        .result-brand {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--gray-400);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 16px;
+        }
+
+        .result-metric {
+            font-size: 48px;
+            font-weight: 900;
+            letter-spacing: -0.03em;
+            color: var(--black);
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .result-metric-label {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--gray-600);
+            margin-bottom: 20px;
+        }
+
+        .result-details {
+            border-top: 1px solid var(--gray-200);
+            padding-top: 20px;
+        }
+        .result-details p {
+            font-size: 14px;
+            color: var(--gray-500);
+            line-height: 1.6;
+        }
+
+        /* ─── TESTIMONIALS ─── */
+        .testimonials-header {
+            text-align: center;
+            margin-bottom: 64px;
+        }
+        .testimonials-header .section-subtitle { margin: 0 auto; }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: 20px;
+            padding: 40px;
+        }
+
+        .testimonial-stars {
+            color: #fbbf24;
+            font-size: 18px;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-card blockquote {
+            font-size: 16px;
+            line-height: 1.8;
+            color: var(--gray-700);
+            margin-bottom: 24px;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .testimonial-avatar {
+            width: 48px; height: 48px;
+            border-radius: 50%;
+            background: linear-gradient(145deg, #2a2a2a, #0a0a0a);
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2), inset 0 1px 1px rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        .testimonial-name {
+            font-weight: 700;
+            font-size: 15px;
+            color: var(--black);
+        }
+        .testimonial-role {
+            font-size: 13px;
+            color: var(--gray-500);
+        }
+
+        /* ─── WHY CHOOSE US ─── */
+        .why-header {
+            text-align: center;
+            margin-bottom: 64px;
+        }
+        .why-header .section-subtitle { margin: 0 auto; }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .why-card {
+            display: flex;
+            gap: 20px;
+            padding: 32px;
+            border: 1px solid var(--gray-200);
+            border-radius: 16px;
+            background: var(--white);
+            transition: all 0.3s;
+        }
+        .why-card:hover {
+            box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+        }
+
+        .why-card h4 {
+            font-size: 17px;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+        .why-card p {
+            font-size: 14px;
+            color: var(--gray-600);
+            line-height: 1.6;
+        }
+
+        /* ─── FAQ ─── */
+        .faq-header {
+            text-align: center;
+            margin-bottom: 64px;
+        }
+        .faq-header .section-subtitle { margin: 0 auto; }
+
+        .faq-list {
+            max-width: 720px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 24px 0;
+            font-size: 17px;
+            font-weight: 600;
+            color: var(--black);
+            text-align: left;
+            font-family: inherit;
+        }
+
+        .faq-icon {
+            width: 28px; height: 28px;
+            border-radius: 50%;
+            background: var(--gray-100);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: transform 0.3s;
+            font-size: 18px;
+            color: var(--gray-600);
+        }
+
+        .faq-item.open .faq-icon { transform: rotate(45deg); }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+        .faq-item.open .faq-answer {
+            max-height: 300px;
+            padding-bottom: 24px;
+        }
+
+        .faq-answer p {
+            font-size: 15px;
+            color: var(--gray-600);
+            line-height: 1.7;
+        }
+
+        /* ─── CTA SECTION ─── */
+        .cta-section {
+            padding: 100px 0;
+            background: var(--black);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -200px; left: 50%;
+            transform: translateX(-50%);
+            width: 600px; height: 600px;
+            background: radial-gradient(circle, rgba(255,255,255,0.03) 0%, transparent 70%);
+        }
+
+        .cta-section .section-label { color: rgba(255,255,255,0.4); }
+        .cta-section .section-title {
+            color: var(--white);
+            max-width: 640px;
+            margin: 0 auto 20px;
+        }
+        .cta-section .section-subtitle {
+            color: rgba(255,255,255,0.6);
+            margin: 0 auto 40px;
+        }
+
+        .cta-btn {
+            background: var(--white);
+            color: var(--black);
+            box-shadow: 0 2px 12px rgba(255,255,255,0.15);
+        }
+        .cta-btn:hover {
+            background: var(--gray-200);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 20px rgba(255,255,255,0.2);
+        }
+
+        .cta-guarantee {
+            margin-top: 24px;
+            font-size: 14px;
+            color: rgba(255,255,255,0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        /* ─── FOOTER ─── */
+        .footer {
+            padding: 60px 0 40px;
+            border-top: 1px solid var(--gray-200);
+        }
+
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .footer-brand p {
+            font-size: 14px;
+            color: var(--gray-500);
+            max-width: 300px;
+            margin-top: 12px;
+            line-height: 1.6;
+        }
+
+        .footer-links h5 {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--gray-400);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 16px;
+        }
+        .footer-links ul {
+            list-style: none;
+        }
+        .footer-links ul li { margin-bottom: 10px; }
+        .footer-links a {
+            font-size: 14px;
+            color: var(--gray-600);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .footer-links a:hover { color: var(--black); }
+
+        .footer-bottom {
+            margin-top: 48px;
+            padding-top: 24px;
+            border-top: 1px solid var(--gray-200);
+            font-size: 13px;
+            color: var(--gray-400);
+            text-align: center;
+        }
+
+        /* ─── SCROLL ANIMATIONS ─── */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ─── RESPONSIVE ─── */
+        @media (max-width: 968px) {
+            .nav-links { display: none; }
+            .mobile-menu-btn { display: block; }
+
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .services-grid { grid-template-columns: 1fr; }
+            .process-grid { grid-template-columns: repeat(2, 1fr); }
+            .results-grid { grid-template-columns: 1fr; }
+            .testimonials-grid { grid-template-columns: 1fr; }
+            .why-grid { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 600px) {
+            .section { padding: 72px 0; }
+            .hero { padding: 120px 0 72px; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; }
+            .process-grid { grid-template-columns: 1fr; }
+            .hero-buttons { flex-direction: column; align-items: center; }
+            .btn { width: 100%; max-width: 320px; }
+        }
+
+        /* ─── MOBILE MENU ─── */
+        .mobile-nav {
+            display: none;
+            position: fixed;
+            top: 72px; left: 0; right: 0;
+            background: var(--white);
+            border-bottom: 1px solid var(--gray-200);
+            padding: 24px;
+            z-index: 999;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+        }
+        .mobile-nav.open { display: block; }
+        .mobile-nav a {
+            display: block;
+            padding: 12px 0;
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--gray-700);
+            text-decoration: none;
+            border-bottom: 1px solid var(--gray-100);
+        }
+        .mobile-nav .btn {
+            margin-top: 16px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<!-- ═══════════ NAV ═══════════ -->
+<nav class="nav" id="nav">
+    <div class="container">
+        <div class="nav-inner">
+            <a href="#" class="nav-logo">
+                <span class="nav-logo-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5">
+                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                    </svg>
+                </span>
+                EcomGrowth
+            </a>
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#results">Results</a></li>
+                <li><a href="#process">Process</a></li>
+                <li><a href="#testimonials">Reviews</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#cta" class="btn btn-primary nav-cta">Free Growth Audit <span class="btn-arrow">&rarr;</span></a></li>
+            </ul>
+            <button class="mobile-menu-btn" onclick="toggleMenu()" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </div>
+</nav>
+
+<div class="mobile-nav" id="mobileNav">
+    <a href="#services" onclick="toggleMenu()">Services</a>
+    <a href="#results" onclick="toggleMenu()">Results</a>
+    <a href="#process" onclick="toggleMenu()">Process</a>
+    <a href="#testimonials" onclick="toggleMenu()">Reviews</a>
+    <a href="#faq" onclick="toggleMenu()">FAQ</a>
+    <a href="#cta" class="btn btn-primary" onclick="toggleMenu()">Free Growth Audit &rarr;</a>
+</div>
+
+<!-- ═══════════ HERO ═══════════ -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-badge">
+            <span class="badge"><span class="badge-dot"></span> Accepting 3 New Clients This Month</span>
+        </div>
+        <h1>Scale Your Ecommerce Brand to <span class="hero-highlight">7-Figures</span> and Beyond</h1>
+        <p>We help DTC & ecommerce brands generate predictable, profitable revenue through paid ads, email flows, and conversion optimization.</p>
+        <div class="hero-buttons">
+            <a href="#cta" class="btn btn-primary">Get Your Free Growth Audit <span class="btn-arrow">&rarr;</span></a>
+            <a href="#results" class="btn btn-outline">See Client Results</a>
+        </div>
+        <div class="hero-proof">
+            <div class="hero-proof-avatars">
+                <span>J</span><span>S</span><span>M</span><span>R</span><span>A</span>
+            </div>
+            <div>
+                <div class="hero-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <div class="hero-proof-text"><strong>127+ ecommerce brands</strong> scaled profitably</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════ LOGOS ═══════════ -->
+<section class="logos">
+    <div class="container">
+        <div class="logos-label">Trusted by brands selling on</div>
+        <div class="logos-grid">
+            <span>Shopify</span>
+            <span>WooCommerce</span>
+            <span>BigCommerce</span>
+            <span>Magento</span>
+            <span>Amazon</span>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════ STATS ═══════════ -->
+<section class="stats">
+    <div class="container">
+        <div class="stats-grid">
+            <div class="fade-up">
+                <div class="stat-number">$47M+</div>
+                <div class="stat-label">Revenue Generated for Clients</div>
+            </div>
+            <div class="fade-up">
+                <div class="stat-number">4.2x</div>
+                <div class="stat-label">Average ROAS Across Accounts</div>
+            </div>
+            <div class="fade-up">
+                <div class="stat-number">127+</div>
+                <div class="stat-label">Ecommerce Brands Scaled</div>
+            </div>
+            <div class="fade-up">
+                <div class="stat-number">93%</div>
+                <div class="stat-label">Client Retention Rate</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════ SERVICES ═══════════ -->
+<section class="section" id="services">
+    <div class="container">
+        <div class="services-header fade-up">
+            <div class="section-label">What We Do</div>
+            <h2 class="section-title">Full-Stack Ecommerce Growth</h2>
+            <p class="section-subtitle">Every lever that drives revenue — managed under one roof with full transparency.</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card fade-up">
+                <div class="icon-wrap">
+                    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                </div>
+                <h3>Paid Social Ads</h3>
+                <p>Profitable Meta, TikTok & Pinterest campaigns built for scale, not vanity metrics.</p>
+                <ul>
+                    <li>Creative strategy & UGC</li>
+                    <li>Audience segmentation</li>
+                    <li>Retargeting funnels</li>
+                    <li>Daily optimization</li>
+                </ul>
+            </div>
+            <div class="service-card fade-up">
+                <div class="icon-wrap">
+                    <svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                </div>
+                <h3>Google & Shopping Ads</h3>
+                <p>Capture high-intent buyers at the exact moment they're ready to purchase.</p>
+                <ul>
+                    <li>Google Shopping & PMax</li>
+                    <li>Search & display campaigns</li>
+                    <li>Feed optimization</li>
+                    <li>Bid strategy management</li>
+                </ul>
+            </div>
+            <div class="service-card fade-up">
+                <div class="icon-wrap">
+                    <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </div>
+                <h3>Email & SMS Marketing</h3>
+                <p>Automated flows and campaigns that turn one-time buyers into repeat customers.</p>
+                <ul>
+                    <li>Klaviyo setup & flows</li>
+                    <li>Abandoned cart recovery</li>
+                    <li>Post-purchase sequences</li>
+                    <li>Campaign calendar</li>
+                </ul>
+            </div>
+            <div class="service-card fade-up">
+                <div class="icon-wrap">
+                    <svg viewBox="0 0 24 24"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+                </div>
+                <h3>Conversion Rate Optimization</h3>
+                <p>Turn more visitors into buyers with data-driven landing pages and A/B tests.</p>
+                <ul>
+                    <li>Landing page design</li>
+                    <li>A/B & multivariate testing</li>
+                    <li>Checkout optimization</li>
+                    <li>Heatmap analysis</li>
+                </ul>
+            </div>
+            <div class="service-card fade-up">
+                <div class="icon-wrap">
+                    <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                </div>
+                <h3>Creative & Content</h3>
+                <p>Scroll-stopping ad creative and UGC that builds brand and drives clicks.</p>
+                <ul>
+                    <li>UGC creator management</li>
+                    <li>Static & video ads</li>
+                    <li>Product photography direction</li>
+                    <li>Copywriting</li>
+                </ul>
+            </div>
+            <div class="service-card fade-up">
+                <div class="icon-wrap">
+                    <svg viewBox="0 0 24 24"><path d="M12 20V10M18 20V4M6 20v-4"/></svg>
+                </div>
+                <h3>Analytics & Reporting</h3>
+                <p>Custom dashboards so you always know exactly where your money is going.</p>
+                <ul>
+                    <li>Custom attribution models</li>
+                    <li>Weekly performance reports</li>
+                    <li>LTV & cohort analysis</li>
+                    <li>Profit tracking</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════ PROCESS ═══════════ -->
+<section class="section section-alt" id="process">
+    <div class="container">
+        <div class="process-header fade-up">
+            <div class="section-label">How It Works</div>
+            <h2 class="section-title">From Audit to Scale in 4 Steps</h2>
+            <p class="section-subtitle">A proven process refined across 127+ ecommerce brands.</p>
+        </div>
+        <div class="process-grid">
+            <div class="process-step fade-up">
+                <div class="process-number">1</div>
+                <h4>Free Growth Audit</h4>
+                <p>We analyze your store, ads, and email to find the biggest revenue opportunities.</p>
+            </div>
+            <div class="process-step fade-up">
+                <div class="process-number">2</div>
+                <h4>Custom Strategy</h4>
+                <p>You get a 90-day growth roadmap tailored to your brand, margins, and goals.</p>
+            </div>
+            <div class="process-step fade-up">
+                <div class="process-number">3</div>
+                <h4>Launch & Optimize</h4>
+                <p>We build, launch, and relentlessly optimize every campaign to hit your targets.</p>
+            </div>
+            <div class="process-step fade-up">
+                <div class="process-number">4</div>
+                <h4>Scale Profitably</h4>
+                <p>Once we find what works, we pour fuel on the fire while protecting your margins.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════ RESULTS ═══════════ -->
+<section class="section" id="results">
+    <div class="container">
+        <div class="results-header fade-up">
+            <div class="section-label">Client Results</div>
+            <h2 class="section-title">Real Numbers. Real Brands.</h2>
+            <p class="section-subtitle">Here's what happens when strategy meets execution.</p>
+        </div>
+        <div class="results-grid">
+            <div class="result-card fade-up">
+                <div class="result-brand">Fashion & Apparel Brand</div>
+                <div class="result-metric">312%</div>
+                <div class="result-metric-label">Increase in Revenue</div>
+                <div class="result-details">
+                    <p>Scaled from $42K/mo to $173K/mo in 6 months with Meta Ads and Klaviyo flows. ROAS improved from 1.8x to 4.7x.</p>
+                </div>
+            </div>
+            <div class="result-card fade-up">
+                <div class="result-brand">Health & Supplements</div>
+                <div class="result-metric">5.3x</div>
+                <div class="result-metric-label">Blended ROAS</div>
+                <div class="result-details">
+                    <p>Rebuilt their entire ad funnel from scratch. Email now accounts for 38% of total revenue through automated flows.</p>
+                </div>
+            </div>
+            <div class="result-card fade-up">
+                <div class="result-brand">Home & Lifestyle</div>
+                <div class="result-metric">$2.1M</div>
+                <div class="result-metric-label">Generated in 12 Months</div>
+                <div class="result-details">
+                    <p>Launched on Google Shopping + Meta. CPA decreased 47% while scaling ad spend from $8K to $45K/month.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════ TESTIMONIALS ═══════════ -->
+<section class="section section-alt" id="testimonials">
+    <div class="container">
+        <div class="testimonials-header fade-up">
+            <div class="section-label">Testimonials</div>
+            <h2 class="section-title">What Our Clients Say</h2>
+            <p class="section-subtitle">Don't just take our word for it.</p>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial-card fade-up">
+                <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <blockquote>"EcomGrowth took our brand from barely breaking even to consistently profitable in under 90 days. Their Meta Ads strategy completely transformed our business."</blockquote>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">JK</div>
+                    <div>
+                        <div class="testimonial-name">James K.</div>
+                        <div class="testimonial-role">Founder, Urban Threads Co.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card fade-up">
+                <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <blockquote>"The Klaviyo flows alone paid for the entire engagement in the first month. Our email revenue went from 8% to 34% of total — that's pure margin."</blockquote>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">SR</div>
+                    <div>
+                        <div class="testimonial-name">Sarah R.</div>
+                        <div class="testimonial-role">CEO, GlowVitals</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card fade-up">
+                <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <blockquote>"We've worked with 4 agencies before. EcomGrowth is the first one that actually understands unit economics and builds campaigns around profit, not just revenue."</blockquote>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">MH</div>
+                    <div>
+                        <div class="testimonial-name">Michael H.</div>
+                        <div class="testimonial-role">Co-Founder, Haven Home</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card fade-up">
+                <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <blockquote>"Their weekly reports are incredible. I always know exactly what's happening, what's working, and where every dollar is going. Total transparency."</blockquote>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">LP</div>
+                    <div>
+                        <div class="testimonial-name">Lisa P.</div>
+                        <div class="testimonial-role">Head of Marketing, FreshFit</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════ WHY CHOOSE US ═══════════ -->
+<section class="section" id="why">
+    <div class="container">
+        <div class="why-header fade-up">
+            <div class="section-label">Why EcomGrowth</div>
+            <h2 class="section-title">Built Different From Other Agencies</h2>
+            <p class="section-subtitle">We don't just run ads. We build growth engines.</p>
+        </div>
+        <div class="why-grid">
+            <div class="why-card fade-up">
+                <div class="icon-wrap">
+                    <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <div>
+                    <h4>Profit-First Approach</h4>
+                    <p>We optimize for profit, not just revenue. Every decision is tied to your unit economics and margins.</p>
+                </div>
+            </div>
+            <div class="why-card fade-up">
+                <div class="icon-wrap">
+                    <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                </div>
+                <div>
+                    <h4>Dedicated Team</h4>
+                    <p>You get a senior strategist, media buyer, email specialist, and creative lead — not a junior account manager.</p>
+                </div>
+            </div>
+            <div class="why-card fade-up">
+                <div class="icon-wrap">
+                    <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                </div>
+                <div>
+                    <h4>Full Transparency</h4>
+                    <p>Real-time dashboards, weekly calls, and Slack access. No smoke, no mirrors — just data.</p>
+                </div>
+            </div>
+            <div class="why-card fade-up">
+                <div class="icon-wrap">
+                    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+                <div>
+                    <h4>Speed to Results</h4>
+                    <p>Most clients see measurable improvement in the first 30 days. We move fast because your budget is on the line.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════ FAQ ═══════════ -->
+<section class="section section-alt" id="faq">
+    <div class="container">
+        <div class="faq-header fade-up">
+            <div class="section-label">FAQ</div>
+            <h2 class="section-title">Common Questions</h2>
+            <p class="section-subtitle">Everything you need to know before we get started.</p>
+        </div>
+        <div class="faq-list fade-up">
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    What's the minimum ad spend you work with?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>We typically work with brands spending at least $5,000/month on ads. This gives us enough data to optimize quickly and enough room to scale profitably. If you're spending less, we can still help with email/SMS and CRO.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    How long until I see results?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Most clients see measurable improvements within the first 30 days — better ROAS, lower CPAs, or increased email revenue. Significant scaling typically happens in months 2-3 as we dial in the winning creative and audiences.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    Do you require long-term contracts?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>We offer month-to-month agreements after an initial 90-day onboarding period. The 90 days gives us enough time to build your strategy, launch campaigns, and prove results. After that, you stay because it's working — not because you're locked in.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    What platforms do you specialize in?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>We specialize in Meta Ads (Facebook & Instagram), Google Ads (Search, Shopping & PMax), TikTok Ads, Klaviyo (email & SMS), and conversion rate optimization. We also work with Pinterest and Snapchat for specific verticals.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    What does the free growth audit include?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Our growth audit is a comprehensive review of your current ad accounts, email/SMS setup, website conversion funnel, and competitive positioning. You'll get a custom report with specific, actionable recommendations — whether you work with us or not.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    How is your pricing structured?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>We offer flat-fee monthly retainers based on the scope of services. No hidden fees, no percentage of ad spend markups. You'll know exactly what you're paying before we start. We'll walk through pricing on our strategy call.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════ CTA ═══════════ -->
+<section class="cta-section" id="cta">
+    <div class="container">
+        <div class="section-label">Let's Grow</div>
+        <h2 class="section-title">Ready to Scale Your Ecommerce Brand?</h2>
+        <p class="section-subtitle">Book your free growth audit and get a custom roadmap to profitable growth — no commitment required.</p>
+        <a href="#" class="btn cta-btn" onclick="document.getElementById('audit-form').scrollIntoView({behavior:'smooth'}); return false;">
+            Book Your Free Growth Audit <span class="btn-arrow">&rarr;</span>
+        </a>
+        <div class="cta-guarantee">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            No commitment &bull; 100% free &bull; Custom strategy included
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════ BOOKING FORM ═══════════ -->
+<section class="section" id="audit-form">
+    <div class="container" style="max-width:640px;">
+        <div style="text-align:center; margin-bottom:48px;" class="fade-up">
+            <div class="section-label">Book Your Audit</div>
+            <h2 class="section-title">Get Your Free Growth Audit</h2>
+            <p class="section-subtitle" style="margin:0 auto;">Fill in your details and we'll send you a custom growth plan within 48 hours.</p>
+        </div>
+        <form class="fade-up" onsubmit="handleSubmit(event)" style="display:flex; flex-direction:column; gap:16px;">
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+                <div>
+                    <label style="display:block; font-size:14px; font-weight:600; margin-bottom:6px; color:var(--gray-700);">First Name *</label>
+                    <input type="text" required placeholder="John" style="width:100%; padding:14px 16px; border:1px solid var(--gray-200); border-radius:10px; font-size:15px; font-family:inherit; outline:none; transition:border 0.2s;" onfocus="this.style.borderColor='var(--black)'" onblur="this.style.borderColor='var(--gray-200)'">
+                </div>
+                <div>
+                    <label style="display:block; font-size:14px; font-weight:600; margin-bottom:6px; color:var(--gray-700);">Last Name *</label>
+                    <input type="text" required placeholder="Smith" style="width:100%; padding:14px 16px; border:1px solid var(--gray-200); border-radius:10px; font-size:15px; font-family:inherit; outline:none; transition:border 0.2s;" onfocus="this.style.borderColor='var(--black)'" onblur="this.style.borderColor='var(--gray-200)'">
+                </div>
+            </div>
+            <div>
+                <label style="display:block; font-size:14px; font-weight:600; margin-bottom:6px; color:var(--gray-700);">Email *</label>
+                <input type="email" required placeholder="john@yourbrand.com" style="width:100%; padding:14px 16px; border:1px solid var(--gray-200); border-radius:10px; font-size:15px; font-family:inherit; outline:none; transition:border 0.2s;" onfocus="this.style.borderColor='var(--black)'" onblur="this.style.borderColor='var(--gray-200)'">
+            </div>
+            <div>
+                <label style="display:block; font-size:14px; font-weight:600; margin-bottom:6px; color:var(--gray-700);">Website URL *</label>
+                <input type="url" required placeholder="https://yourbrand.com" style="width:100%; padding:14px 16px; border:1px solid var(--gray-200); border-radius:10px; font-size:15px; font-family:inherit; outline:none; transition:border 0.2s;" onfocus="this.style.borderColor='var(--black)'" onblur="this.style.borderColor='var(--gray-200)'">
+            </div>
+            <div>
+                <label style="display:block; font-size:14px; font-weight:600; margin-bottom:6px; color:var(--gray-700);">Monthly Revenue *</label>
+                <select required style="width:100%; padding:14px 16px; border:1px solid var(--gray-200); border-radius:10px; font-size:15px; font-family:inherit; outline:none; background:white; cursor:pointer; transition:border 0.2s;" onfocus="this.style.borderColor='var(--black)'" onblur="this.style.borderColor='var(--gray-200)'">
+                    <option value="" disabled selected>Select your monthly revenue</option>
+                    <option>Under $10K/mo</option>
+                    <option>$10K - $50K/mo</option>
+                    <option>$50K - $100K/mo</option>
+                    <option>$100K - $500K/mo</option>
+                    <option>$500K+/mo</option>
+                </select>
+            </div>
+            <div>
+                <label style="display:block; font-size:14px; font-weight:600; margin-bottom:6px; color:var(--gray-700);">What's your biggest growth challenge?</label>
+                <textarea rows="3" placeholder="E.g., struggling to scale Meta Ads profitably..." style="width:100%; padding:14px 16px; border:1px solid var(--gray-200); border-radius:10px; font-size:15px; font-family:inherit; outline:none; resize:vertical; transition:border 0.2s;" onfocus="this.style.borderColor='var(--black)'" onblur="this.style.borderColor='var(--gray-200)'"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="margin-top:8px; width:100%;">
+                Get My Free Growth Audit <span class="btn-arrow">&rarr;</span>
+            </button>
+            <p style="text-align:center; font-size:13px; color:var(--gray-400); margin-top:4px;">
+                We'll respond within 48 hours. No spam, ever.
+            </p>
+        </form>
+    </div>
+</section>
+
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <a href="#" class="nav-logo">
+                    <span class="nav-logo-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5">
+                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                        </svg>
+                    </span>
+                    EcomGrowth
+                </a>
+                <p>We help ecommerce brands scale revenue profitably through paid ads, email, and CRO. Based in the UK, working globally.</p>
+            </div>
+            <div class="footer-links">
+                <h5>Services</h5>
+                <ul>
+                    <li><a href="#services">Paid Social Ads</a></li>
+                    <li><a href="#services">Google & Shopping</a></li>
+                    <li><a href="#services">Email & SMS</a></li>
+                    <li><a href="#services">CRO</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h5>Company</h5>
+                <ul>
+                    <li><a href="#results">Case Studies</a></li>
+                    <li><a href="#process">Our Process</a></li>
+                    <li><a href="#testimonials">Reviews</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h5>Get Started</h5>
+                <ul>
+                    <li><a href="#cta">Free Growth Audit</a></li>
+                    <li><a href="#audit-form">Book a Call</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 EcomGrowth Agency. All rights reserved.
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Scroll nav shadow
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+        nav.classList.toggle('scrolled', window.scrollY > 10);
+    });
+
+    // Mobile menu
+    function toggleMenu() {
+        document.getElementById('mobileNav').classList.toggle('open');
+    }
+
+    // FAQ toggle
+    function toggleFaq(btn) {
+        const item = btn.parentElement;
+        const wasOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        if (!wasOpen) item.classList.add('open');
+    }
+
+    // Scroll animations
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+    // Form submission
+    function handleSubmit(e) {
+        e.preventDefault();
+        const btn = e.target.querySelector('button[type="submit"]');
+        btn.innerHTML = '<span style="display:inline-flex;align-items:center;gap:8px;">&#10003; Audit Request Sent!</span>';
+        btn.style.background = '#22c55e';
+        btn.disabled = true;
+        setTimeout(() => {
+            btn.innerHTML = 'Get My Free Growth Audit <span class="btn-arrow">&rarr;</span>';
+            btn.style.background = '';
+            btn.disabled = false;
+            e.target.reset();
+        }, 3000);
+    }
+</script>
+
+</body>
+</html>
