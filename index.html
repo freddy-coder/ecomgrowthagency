@@ -314,21 +314,16 @@
         .hero-proof-avatars {
             display: flex;
         }
-        .hero-proof-avatars span {
+        .hero-proof-avatars img {
             width: 40px; height: 40px;
             border-radius: 50%;
-            background: var(--green);
             border: 3px solid var(--white);
             margin-left: -10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 14px;
-            color: white;
-            font-weight: 600;
-            box-shadow: 0 2px 6px rgba(34,197,94,0.2);
+            object-fit: cover;
+            background: var(--white);
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
         }
-        .hero-proof-avatars span:first-child { margin-left: 0; }
+        .hero-proof-avatars img:first-child { margin-left: 0; }
 
         .hero-proof-text {
             font-size: 14px;
@@ -363,15 +358,20 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 56px;
+            gap: 48px;
             flex-wrap: wrap;
-            opacity: 0.5;
         }
-        .logos-grid span {
-            font-size: 20px;
-            font-weight: 800;
-            color: var(--gray-700);
-            letter-spacing: -0.02em;
+        .logos-grid img {
+            height: 40px;
+            width: auto;
+            object-fit: contain;
+            opacity: 0.7;
+            transition: opacity 0.2s;
+            filter: grayscale(100%);
+        }
+        .logos-grid img:hover {
+            opacity: 1;
+            filter: grayscale(0%);
         }
 
         /* ─── STATS BAR ─── */
@@ -948,7 +948,7 @@
         </div>
         <div class="hero-proof">
             <div class="hero-proof-avatars">
-                <span>J</span><span>S</span><span>M</span><span>R</span><span>A</span>
+                <img src="logos/hunter.png" alt="Hunter"><img src="logos/scamp-and-dude.jpeg" alt="Scamp & Dude"><img src="logos/missoma.jpeg" alt="Missoma"><img src="logos/neals-yard.png" alt="Neal's Yard Remedies"><img src="logos/optimum-nutrition.png" alt="Optimum Nutrition">
             </div>
             <div>
                 <div class="hero-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
@@ -963,16 +963,12 @@
     <div class="container">
         <div class="logos-label">Trusted by brands such as</div>
         <div class="logos-grid">
-            <span>Hunter Boots</span>
-            <span>Oral B</span>
-            <span>Logitech</span>
-            <span>Optimum Nutrition</span>
-            <span>SlimFast</span>
-            <span>Deluxe Fashion</span>
-            <span>Scamp and Dude</span>
-            <span>Neal's Yard Remedies</span>
-            <span>Hyatt Hotels</span>
-            <span>Saudi Oil</span>
+            <img src="logos/hunter.png" alt="Hunter Boots">
+            <img src="logos/scamp-and-dude.jpeg" alt="Scamp & Dude">
+            <img src="logos/missoma.jpeg" alt="Missoma">
+            <img src="logos/neals-yard.png" alt="Neal's Yard Remedies">
+            <img src="logos/optimum-nutrition.png" alt="Optimum Nutrition">
+            <img src="logos/british-airways.png" alt="British Airways">
         </div>
     </div>
 </section>
