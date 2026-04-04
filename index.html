@@ -192,10 +192,14 @@
             letter-spacing: -0.02em;
         }
 
-        .nav-logo-img {
-            height: 48px;
-            width: auto;
-            object-fit: contain;
+        .nav-logo-icon {
+            flex-shrink: 0;
+        }
+
+        .nav-logo-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 20px;
+            letter-spacing: -0.02em;
         }
 
         .nav-links {
@@ -907,7 +911,13 @@
     <div class="container">
         <div class="nav-inner">
             <a href="#" class="nav-logo">
-                <img src="logo.png" alt="EcomGrowth" class="nav-logo-img">
+                <svg class="nav-logo-icon" width="36" height="36" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform:rotate(15deg);">
+                    <path d="M14 14h20v24H14z" fill="#B97D0F"/>
+                    <path d="M18 14V10a6 6 0 0 1 12 0v4" stroke="#000" stroke-width="2.5" stroke-linecap="round"/>
+                    <path d="M18 34L34 14" stroke="#000" stroke-width="4" stroke-linecap="round"/>
+                    <path d="M28 14l6 0M34 14l0 6" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="nav-logo-text"><span style="color:#FFFFFF;font-weight:700;">Ecom</span><span style="color:#AAAAAA;font-weight:700;">Growth</span></span>
             </a>
             <ul class="nav-links">
                 <li><a href="#services">Services</a></li>
@@ -1351,7 +1361,13 @@
         <div class="footer-inner">
             <div class="footer-brand">
                 <a href="#" class="nav-logo">
-                    <img src="logo.png" alt="EcomGrowth" class="nav-logo-img">
+                    <svg class="nav-logo-icon" width="36" height="36" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform:rotate(15deg);">
+                        <path d="M14 14h20v24H14z" fill="#B97D0F"/>
+                        <path d="M18 14V10a6 6 0 0 1 12 0v4" stroke="#000" stroke-width="2.5" stroke-linecap="round"/>
+                        <path d="M18 34L34 14" stroke="#000" stroke-width="4" stroke-linecap="round"/>
+                        <path d="M28 14l6 0M34 14l0 6" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span class="nav-logo-text"><span style="color:#FFFFFF;font-weight:700;">Ecom</span><span style="color:#AAAAAA;font-weight:700;">Growth</span></span>
                 </a>
                 <p>We help ecommerce brands scale revenue profitably through paid ads, email, and CRO. Based in the UK, working globally.</p>
             </div>
