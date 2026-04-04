@@ -42,7 +42,7 @@ The icon and wordmark should always appear together in the primary lockup unless
 
 ### Icon / Mark
 
-- A **shopping bag** in solid emerald green, **tilted ~15° to the right**
+- A **shopping bag** in solid brand gold, **tilted ~15° to the right**
 - A **bold diagonal arrow** cuts through the bag from bottom-left to top-right, extending beyond the bag's outline — representing upward growth
 - The arrow has a **clean, pointed head**
 - The bag has **two short handle straps** visible at the top
@@ -53,9 +53,9 @@ The icon and wordmark should always appear together in the primary lockup unless
 ### Wordmark
 
 - **"EcomGrowth"** — one word, capital **E** and capital **G**
-- Typeface: Bold geometric sans-serif (Plus Jakarta Sans Bold or DM Sans Bold)
-- **"Ecom"** — dark navy-black (`#0F172A`)
-- **"Growth"** — slightly lighter weight / medium grey-charcoal (`#334155`)
+- Typeface: Bold geometric sans-serif (Montserrat Bold)
+- **"Ecom"** — midnight black (`#000000`)
+- **"Growth"** — slightly lighter weight / charcoal (`#272526`)
 - This weight/colour shift creates subtle visual hierarchy between the two halves
 - Clean, **tight letterspacing**
 
@@ -88,25 +88,26 @@ Maintain a minimum clear space around the full logo equal to the height of the i
 
 | Colour           | Hex       | RGB             | Usage                              |
 | ---------------- | --------- | --------------- | ---------------------------------- |
-| **Emerald Green** | `#22C55E` | 34, 197, 94    | Icon, CTAs, accent elements, links |
-| **Navy Black**   | `#0F172A` | 15, 23, 42      | Primary text, "Ecom" wordmark      |
+| **Brand Gold**   | `#B97D0F` | 185, 125, 15   | Icon, CTAs, accent elements, links |
+| **Midnight Black** | `#000000` | 0, 0, 0       | Primary text, backgrounds, "Ecom" wordmark |
 
 ### Secondary Colours
 
 | Colour             | Hex       | RGB             | Usage                                  |
 | ------------------ | --------- | --------------- | -------------------------------------- |
-| **Charcoal Grey**  | `#334155` | 51, 65, 85      | "Growth" wordmark, secondary text      |
-| **Slate**          | `#64748B` | 100, 116, 139   | Body text, captions, subtle UI         |
-| **Pale Mint Grey** | `#F0F5F3` | 240, 245, 243   | Backgrounds, cards, sections           |
-| **Off White**      | `#F8FAFC` | 248, 250, 252   | Page backgrounds                       |
-| **White**          | `#FFFFFF` | 255, 255, 255   | Cards, overlays, reversed text on dark |
+| **Charcoal**       | `#272526` | 39, 37, 38      | "Growth" wordmark, card backgrounds    |
+| **Warm Grey**      | `#AAAAAA` | 170, 170, 170   | Body text, captions, subtle UI         |
+| **Gold Light**     | `#BF8410` | 191, 132, 16    | Gradient highlight, hover states       |
+| **Gold Deep**      | `#BA7B0E` | 186, 123, 14    | Gradient shadow, pressed states        |
+| **White**          | `#FFFFFF` | 255, 255, 255   | Headlines, cards, overlays, reversed text on dark |
 
 ### Usage Rules
 
-- The **emerald green** is the signature brand colour — use it sparingly and intentionally for impact (CTAs, the icon, key stats, highlights)
-- **Navy black** is the default text colour
-- Backgrounds alternate between **white**, **off-white**, and **pale mint grey** for section separation
-- Never place green text on dark backgrounds at small sizes — use white instead
+- The **brand gold** is the signature brand colour — use it sparingly and intentionally for impact (CTAs, the icon, key stats, highlights)
+- **Midnight black** is the default background colour; **white** is the default text colour
+- Card backgrounds use **charcoal** (`#272526`) to create subtle depth against black
+- Secondary/supporting text uses **warm grey** (`#AAAAAA`)
+- Never place gold text at small sizes on dark backgrounds — use white instead
 - The palette is deliberately restrained: **two core colours + neutrals**
 
 ---
@@ -115,38 +116,46 @@ Maintain a minimum clear space around the full logo equal to the height of the i
 
 ### Primary Typeface
 
-**Plus Jakarta Sans** (Google Fonts) — or **DM Sans** as a substitute
+**Montserrat** (Google Fonts) — display and body sans-serif
+**Playfair Display** (Google Fonts) — accent serif for taglines and callouts
 
-| Style     | Weight      | Usage                                      |
-| --------- | ----------- | ------------------------------------------ |
-| Bold      | 700         | Headlines, wordmark, stats, CTAs           |
-| Semi-Bold | 600         | Subheadings, card titles, navigation       |
-| Medium    | 500         | Body emphasis, labels, buttons             |
-| Regular   | 400         | Body copy, descriptions, long-form text    |
+| Family           | Style     | Weight      | Usage                                      |
+| ---------------- | --------- | ----------- | ------------------------------------------ |
+| Montserrat       | Black     | 900         | Headlines, hero text, stat numbers         |
+| Montserrat       | Bold      | 700         | Wordmark, subheadings, CTAs                |
+| Montserrat       | Semi-Bold | 600         | Card titles, navigation                    |
+| Montserrat       | Regular   | 400         | Body copy, descriptions, long-form text    |
+| Playfair Display | Regular   | 400         | Subtitles, elegant subheadings             |
+| Playfair Display | Italic    | 400i        | Taglines, callout quotes, accent text      |
 
 ### Fallback Stack
 
 ```
-'Plus Jakarta Sans', 'DM Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif
+'Montserrat', 'Helvetica Neue', Arial, sans-serif
+'Playfair Display', Georgia, 'Times New Roman', serif
 ```
 
 ### Type Scale (Web)
 
-| Element       | Size   | Weight | Line Height | Letterspacing |
-| ------------- | ------ | ------ | ----------- | ------------- |
-| H1 (Hero)     | 48–56px | 700   | 1.1         | -0.02em       |
-| H2 (Section)  | 36–40px | 700   | 1.15        | -0.01em       |
-| H3 (Card)     | 20–24px | 600   | 1.3         | 0             |
-| Body          | 16–18px | 400   | 1.6         | 0             |
-| Small / Caption | 14px | 400   | 1.5         | 0.01em        |
-| Stat Number   | 48–64px | 700   | 1.0         | -0.02em       |
+| Element       | Family           | Size   | Weight | Line Height | Letterspacing |
+| ------------- | ---------------- | ------ | ------ | ----------- | ------------- |
+| H1 (Hero)     | Montserrat       | 48–56px | 900   | 1.1         | -0.01em       |
+| H2 (Section)  | Montserrat       | 36–40px | 700   | 1.15        | -0.01em       |
+| H3 (Card)     | Montserrat       | 20–24px | 600   | 1.3         | 0             |
+| Subtitle      | Playfair Display | 20–24px | 400   | 1.3         | 0             |
+| Body          | Montserrat       | 16–18px | 400   | 1.6         | 0             |
+| Small / Caption | Montserrat     | 14px   | 400   | 1.5         | 0.01em        |
+| Stat Number   | Montserrat       | 48–64px | 900   | 1.0         | -0.02em       |
+| Tagline       | Playfair Display | 18–22px | 400i  | 1.4         | 0             |
 
 ### Rules
 
-- Headlines: tight letterspacing, short line lengths (max ~20 words)
-- Body: generous line height (1.5–1.6) for readability
-- Stats/numbers should be large and bold — they're a core trust signal
+- Headlines: tight letterspacing, short line lengths (max ~20 words), always Montserrat Black or Bold
+- Body: generous line height (1.5–1.6) for readability, Montserrat Regular
+- Playfair Display is reserved for taglines, subtitles, and accent callouts only — never for body text
+- Stats/numbers should be large and bold (Montserrat Black) — they're a core trust signal
 - Never use all-caps for body text; sparingly for labels/badges only
+- The most important word or phrase in a headline can be set in Brand Gold for emphasis
 
 ---
 
@@ -162,20 +171,20 @@ Maintain a minimum clear space around the full logo equal to the height of the i
 ### Graphics & Icons
 
 - **Flat, geometric line icons** — consistent 2px stroke weight
-- Icon colour: emerald green or navy black depending on context
+- Icon colour: brand gold or white depending on context
 - No illustrated characters or mascots
 - Use simple iconography for service cards (e.g., shopping bag, chart, envelope, palette)
 
 ### Data Visualisation
 
-- Use emerald green as the primary data colour
-- Navy black for axes and labels
-- Pale mint grey for gridlines and backgrounds
+- Use brand gold as the primary data colour
+- White for axes and labels
+- Charcoal (`#272526`) for gridlines and backgrounds
 - Keep charts clean and minimal — no 3D, no unnecessary decoration
 
 ### Overall Aesthetic
 
-> **Shopify meets Robinhood** — clean, confident, tech-forward. Modern SaaS energy applied to ecommerce marketing. Every visual element should feel intentional and uncluttered.
+> **Dark authority meets luxury** — high-contrast, premium, minimal. Every visual element should feel intentional and uncluttered. Black canvas, gold accents, white type.
 
 ---
 
@@ -185,21 +194,21 @@ Maintain a minimum clear space around the full logo equal to the height of the i
 
 | Type      | Background  | Text      | Border | Border Radius |
 | --------- | ----------- | --------- | ------ | ------------- |
-| Primary   | `#22C55E`   | `#FFFFFF` | None   | 8px           |
-| Secondary | Transparent | `#0F172A` | 1px `#334155` | 8px     |
-| Ghost     | Transparent | `#22C55E` | None   | 8px           |
+| Primary   | `#B97D0F`   | `#FFFFFF` | None   | 8px           |
+| Secondary | Transparent | `#FFFFFF` | 1px `#AAAAAA` | 8px     |
+| Ghost     | Transparent | `#B97D0F` | None   | 8px           |
 
 ### Cards
 
-- Background: `#FFFFFF`
-- Border: 1px `#E2E8F0` or none with subtle shadow
+- Background: `#272526`
+- Border: 1px `#3A3839` or none
 - Border radius: 12px
 - Padding: 24–32px
 
 ### Badges / Pills
 
-- Background: `#F0F5F3`
-- Text: `#22C55E` or `#334155`
+- Background: `#1A1819`
+- Text: `#B97D0F` or `#FFFFFF`
 - Border radius: 9999px (fully rounded)
 - Used for: labels, tags, status indicators
 
@@ -214,25 +223,25 @@ Common values: 8, 12, 16, 24, 32, 48, 64, 96
 
 ### Avatar / Profile Picture
 
-Use the **standalone icon mark** (green shopping bag + arrow) on a white or navy-black background.
+Use the **standalone icon mark** (gold shopping bag + arrow) on a black or white background.
 
 ### LinkedIn Banner / Cover Images
 
 - Use the full horizontal lockup centred
-- Background: pale mint grey (`#F0F5F3`) or navy black (`#0F172A`) with white wordmark
+- Background: midnight black (`#000000`) with white wordmark, or charcoal (`#272526`)
 - Can include a one-line tagline beneath: *"Scaling Ecommerce Brands Profitably"*
 
 ### Email Signatures
 
 - Full horizontal logo lockup, max 200px wide
 - Below: name, title, email, booking link
-- Accent colour for links: emerald green
+- Accent colour for links: brand gold
 
 ### Proposal / Deck Headers
 
 - Logo top-left
-- Navy black header bar or pale mint background
-- Key stat callouts use large bold numbers in emerald green
+- Black header bar or charcoal background
+- Key stat callouts use large bold numbers in brand gold
 
 ---
 
@@ -252,13 +261,14 @@ Use the **standalone icon mark** (green shopping bag + arrow) on a white or navy
 
 ```
 Brand:       EcomGrowth
-Green:       #22C55E
-Navy Black:  #0F172A
-Charcoal:    #334155
-Background:  #F0F5F3 / #F8FAFC
-Font:        Plus Jakarta Sans (700 / 600 / 500 / 400)
-Style:       Flat, minimal, geometric, SaaS-modern
-Vibe:        Shopify meets Robinhood — clean, confident, tech-forward
+Gold:        #B97D0F
+Black:       #000000
+Charcoal:    #272526
+Warm Grey:   #AAAAAA
+White:       #FFFFFF
+Font:        Montserrat (900 / 700 / 600 / 400) + Playfair Display (400 / 400i)
+Style:       Dark, premium, high-contrast, minimal
+Vibe:        Authority meets luxury — clean, confident, results-driven
 ```
 
 ---

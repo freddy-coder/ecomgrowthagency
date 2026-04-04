@@ -10,35 +10,29 @@
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
     <style>
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
         :root {
-            --black: #0F172A;
-            --dark: #0F172A;
-            --gray-900: #1E293B;
-            --gray-800: #334155;
-            --gray-700: #334155;
-            --gray-600: #64748B;
-            --gray-500: #64748B;
-            --gray-400: #94A3B8;
-            --gray-300: #CBD5E1;
-            --gray-200: #E2E8F0;
-            --gray-100: #F0F5F3;
-            --white: #ffffff;
-            --off-white: #F8FAFC;
-            --accent: #22C55E;
-            --accent-hover: #16A34A;
-            --green: #22C55E;
+            --black: #000000;
+            --dark: #000000;
+            --charcoal: #272526;
+            --card-border: #3A3839;
+            --warm-grey: #AAAAAA;
+            --gold: #B97D0F;
+            --gold-light: #BF8410;
+            --gold-deep: #BA7B0E;
+            --white: #FFFFFF;
+            --badge-bg: #1A1819;
         }
 
         html { scroll-behavior: smooth; }
 
         body {
-            font-family: 'Plus Jakarta Sans', 'DM Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            color: var(--black);
-            background: var(--off-white);
+            font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+            color: var(--white);
+            background: var(--black);
             line-height: 1.6;
             -webkit-font-smoothing: antialiased;
         }
@@ -46,26 +40,26 @@
         /* ─── UTILITY ─── */
         .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
         .section { padding: 100px 0; }
-        .section-alt { background: var(--gray-100); } /* Pale Mint Grey #F0F5F3 */
+        .section-alt { background: var(--charcoal); }
 
         .badge {
             display: inline-flex;
             align-items: center;
             gap: 6px;
-            background: var(--gray-100);
+            background: var(--badge-bg);
             border: none;
             border-radius: 9999px;
             padding: 8px 18px;
             font-size: 13px;
             font-weight: 600;
-            color: var(--green);
+            color: var(--gold);
             letter-spacing: 0.02em;
             text-transform: uppercase;
         }
 
         .badge-dot {
             width: 6px; height: 6px;
-            background: var(--green);
+            background: var(--gold);
             border-radius: 50%;
             animation: pulse-dot 2s infinite;
         }
@@ -75,27 +69,28 @@
             50% { opacity: 0.4; }
         }
 
-        h1, h2, h3, h4 { line-height: 1.15; letter-spacing: -0.02em; }
+        h1, h2, h3, h4 { line-height: 1.15; letter-spacing: -0.01em; color: var(--white); }
 
         .section-label {
             font-size: 12px;
             font-weight: 700;
             letter-spacing: 0.1em;
             text-transform: uppercase;
-            color: var(--gray-500);
+            color: var(--gold);
             margin-bottom: 16px;
         }
 
         .section-title {
             font-size: clamp(32px, 4vw, 48px);
             font-weight: 700;
-            color: var(--black);
+            color: var(--white);
             margin-bottom: 20px;
         }
 
         .section-subtitle {
+            font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
             font-size: 18px;
-            color: var(--gray-600);
+            color: var(--warm-grey);
             max-width: 600px;
             line-height: 1.7;
         }
@@ -116,24 +111,24 @@
         }
 
         .btn-primary {
-            background: var(--green);
+            background: var(--gold);
             color: var(--white);
-            box-shadow: 0 1px 2px rgba(34,197,94,0.2), 0 4px 12px rgba(34,197,94,0.15);
+            box-shadow: 0 1px 2px rgba(185,125,15,0.2), 0 4px 12px rgba(185,125,15,0.15);
         }
         .btn-primary:hover {
-            background: var(--accent-hover);
+            background: var(--gold-light);
             transform: translateY(-1px);
-            box-shadow: 0 2px 4px rgba(34,197,94,0.2), 0 8px 24px rgba(34,197,94,0.25);
+            box-shadow: 0 2px 4px rgba(185,125,15,0.2), 0 8px 24px rgba(185,125,15,0.25);
         }
 
         .btn-outline {
             background: transparent;
-            color: var(--black);
-            border: 1px solid var(--gray-800);
+            color: var(--white);
+            border: 1px solid var(--warm-grey);
         }
         .btn-outline:hover {
-            border-color: var(--black);
-            background: var(--gray-100);
+            border-color: var(--white);
+            background: rgba(255,255,255,0.05);
         }
 
         .btn-arrow {
@@ -145,7 +140,7 @@
         .icon-wrap {
             width: 56px; height: 56px;
             border-radius: 12px;
-            background: var(--gray-100);
+            background: var(--badge-bg);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -154,7 +149,7 @@
 
         .icon-wrap svg {
             width: 24px; height: 24px;
-            stroke: var(--green);
+            stroke: var(--gold);
             stroke-width: 2;
             fill: none;
             stroke-linecap: round;
@@ -172,12 +167,12 @@
             position: fixed;
             top: 0; left: 0; right: 0;
             z-index: 1000;
-            background: rgba(255,255,255,0.92);
+            background: rgba(0,0,0,0.92);
             backdrop-filter: blur(20px);
-            border-bottom: 1px solid var(--gray-200);
+            border-bottom: 1px solid var(--card-border);
             transition: box-shadow 0.3s;
         }
-        .nav.scrolled { box-shadow: 0 1px 12px rgba(0,0,0,0.06); }
+        .nav.scrolled { box-shadow: 0 1px 12px rgba(0,0,0,0.3); }
 
         .nav-inner {
             display: flex;
@@ -189,7 +184,7 @@
         .nav-logo {
             font-size: 20px;
             font-weight: 700;
-            color: var(--black);
+            color: var(--white);
             text-decoration: none;
             display: flex;
             align-items: center;
@@ -212,11 +207,11 @@
         .nav-links a {
             font-size: 14px;
             font-weight: 500;
-            color: var(--gray-600);
+            color: var(--warm-grey);
             text-decoration: none;
             transition: color 0.2s;
         }
-        .nav-links a:hover { color: var(--black); }
+        .nav-links a:hover { color: var(--white); }
 
         .nav-cta {
             padding: 10px 24px !important;
@@ -235,7 +230,7 @@
             display: block;
             width: 24px;
             height: 2px;
-            background: var(--black);
+            background: var(--white);
             margin: 5px 0;
             transition: 0.3s;
         }
@@ -256,17 +251,17 @@
             transform: translateX(-50%);
             width: 800px;
             height: 800px;
-            background: radial-gradient(circle, rgba(34,197,94,0.04) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(185,125,15,0.06) 0%, transparent 70%);
             pointer-events: none;
         }
 
         .hero-badge { margin-bottom: 32px; }
 
         .hero h1 {
-            font-size: clamp(40px, 6vw, 72px);
-            font-weight: 700;
+            font-size: clamp(40px, 6vw, 56px);
+            font-weight: 900;
             line-height: 1.1;
-            letter-spacing: -0.02em;
+            letter-spacing: -0.01em;
             margin-bottom: 24px;
             max-width: 800px;
             margin-left: auto;
@@ -277,19 +272,22 @@
             position: relative;
             display: inline-block;
         }
+        .hero-highlight {
+            color: var(--gold);
+        }
         .hero-highlight::after {
             content: '';
             position: absolute;
             bottom: 4px; left: -4px; right: -4px;
             height: 12px;
-            background: rgba(34,197,94,0.2);
+            background: rgba(185,125,15,0.2);
             border-radius: 4px;
             z-index: -1;
         }
 
         .hero p {
-            font-size: 20px;
-            color: var(--gray-600);
+            font-size: 18px;
+            color: var(--warm-grey);
             max-width: 560px;
             margin: 0 auto 40px;
             line-height: 1.7;
@@ -317,24 +315,24 @@
         .hero-proof-avatars img {
             width: 40px; height: 40px;
             border-radius: 50%;
-            border: 3px solid var(--white);
+            border: 3px solid var(--charcoal);
             margin-left: -10px;
             object-fit: cover;
-            background: var(--white);
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            background: var(--charcoal);
+            box-shadow: 0 2px 6px rgba(0,0,0,0.3);
         }
         .hero-proof-avatars img:first-child { margin-left: 0; }
 
         .hero-proof-text {
             font-size: 14px;
-            color: var(--gray-600);
+            color: var(--warm-grey);
         }
         .hero-proof-text strong {
-            color: var(--black);
+            color: var(--white);
         }
 
         .hero-stars {
-            color: #fbbf24;
+            color: var(--gold);
             font-size: 16px;
             letter-spacing: 2px;
         }
@@ -342,14 +340,14 @@
         /* ─── LOGOS BAR ─── */
         .logos {
             padding: 60px 0;
-            border-top: 1px solid var(--gray-200);
-            border-bottom: 1px solid var(--gray-200);
+            border-top: 1px solid var(--card-border);
+            border-bottom: 1px solid var(--card-border);
         }
         .logos-label {
             text-align: center;
             font-size: 13px;
             font-weight: 600;
-            color: var(--gray-400);
+            color: var(--warm-grey);
             text-transform: uppercase;
             letter-spacing: 0.1em;
             margin-bottom: 32px;
@@ -365,19 +363,19 @@
             height: 40px;
             width: auto;
             object-fit: contain;
-            opacity: 0.7;
+            opacity: 0.5;
             transition: opacity 0.2s;
-            filter: grayscale(100%);
+            filter: grayscale(100%) brightness(2);
         }
         .logos-grid img:hover {
-            opacity: 1;
-            filter: grayscale(0%);
+            opacity: 0.8;
+            filter: grayscale(0%) brightness(1.5);
         }
 
         /* ─── STATS BAR ─── */
         .stats {
             padding: 80px 0;
-            background: var(--black);
+            background: var(--charcoal);
             color: var(--white);
         }
         .stats-grid {
@@ -388,15 +386,15 @@
         }
         .stat-number {
             font-size: clamp(36px, 5vw, 56px);
-            font-weight: 700;
+            font-weight: 900;
             letter-spacing: -0.02em;
             line-height: 1;
             margin-bottom: 8px;
-            color: var(--green);
+            color: var(--gold);
         }
         .stat-label {
             font-size: 14px;
-            color: rgba(255,255,255,0.6);
+            color: var(--warm-grey);
             font-weight: 500;
         }
 
@@ -416,8 +414,8 @@
         }
 
         .service-card {
-            background: var(--white);
-            border: 1px solid var(--gray-200);
+            background: var(--charcoal);
+            border: 1px solid var(--card-border);
             border-radius: 12px;
             padding: 32px;
             transition: all 0.3s ease;
@@ -429,13 +427,13 @@
             position: absolute;
             top: 0; left: 0; right: 0;
             height: 3px;
-            background: var(--green);
+            background: var(--gold);
             opacity: 0;
             transition: opacity 0.3s;
         }
         .service-card:hover {
-            border-color: var(--gray-300);
-            box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+            border-color: var(--gold-deep);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.2);
             transform: translateY(-2px);
         }
         .service-card:hover::before { opacity: 1; }
@@ -444,13 +442,13 @@
 
         .service-card h3 {
             font-size: 20px;
-            font-weight: 700;
+            font-weight: 600;
             margin-bottom: 12px;
         }
 
         .service-card p {
             font-size: 15px;
-            color: var(--gray-600);
+            color: var(--warm-grey);
             line-height: 1.7;
         }
 
@@ -460,7 +458,7 @@
         }
         .service-card ul li {
             font-size: 14px;
-            color: var(--gray-600);
+            color: var(--warm-grey);
             padding: 6px 0;
             display: flex;
             align-items: center;
@@ -469,7 +467,7 @@
         .service-card ul li::before {
             content: '';
             width: 5px; height: 5px;
-            background: var(--green);
+            background: var(--gold);
             border-radius: 50%;
             flex-shrink: 0;
         }
@@ -496,7 +494,7 @@
         .process-number {
             width: 48px; height: 48px;
             border-radius: 50%;
-            background: var(--green);
+            background: var(--gold);
             color: var(--white);
             font-weight: 700;
             font-size: 18px;
@@ -508,12 +506,12 @@
 
         .process-step h4 {
             font-size: 18px;
-            font-weight: 700;
+            font-weight: 600;
             margin-bottom: 8px;
         }
         .process-step p {
             font-size: 14px;
-            color: var(--gray-600);
+            color: var(--warm-grey);
             line-height: 1.6;
         }
 
@@ -531,21 +529,21 @@
         }
 
         .result-card {
-            background: var(--white);
-            border: 1px solid var(--gray-200);
+            background: var(--charcoal);
+            border: 1px solid var(--card-border);
             border-radius: 12px;
             padding: 32px;
             transition: all 0.3s;
         }
         .result-card:hover {
-            box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.2);
             transform: translateY(-2px);
         }
 
         .result-brand {
             font-size: 13px;
             font-weight: 700;
-            color: var(--gray-400);
+            color: var(--warm-grey);
             text-transform: uppercase;
             letter-spacing: 0.08em;
             margin-bottom: 16px;
@@ -553,9 +551,9 @@
 
         .result-metric {
             font-size: 48px;
-            font-weight: 700;
+            font-weight: 900;
             letter-spacing: -0.02em;
-            color: var(--green);
+            color: var(--gold);
             line-height: 1;
             margin-bottom: 8px;
         }
@@ -563,17 +561,17 @@
         .result-metric-label {
             font-size: 15px;
             font-weight: 600;
-            color: var(--gray-600);
+            color: var(--white);
             margin-bottom: 20px;
         }
 
         .result-details {
-            border-top: 1px solid var(--gray-200);
+            border-top: 1px solid var(--card-border);
             padding-top: 20px;
         }
         .result-details p {
             font-size: 14px;
-            color: var(--gray-500);
+            color: var(--warm-grey);
             line-height: 1.6;
         }
 
@@ -591,14 +589,14 @@
         }
 
         .testimonial-card {
-            background: var(--white);
-            border: 1px solid var(--gray-200);
+            background: var(--charcoal);
+            border: 1px solid var(--card-border);
             border-radius: 12px;
             padding: 32px;
         }
 
         .testimonial-stars {
-            color: #fbbf24;
+            color: var(--gold);
             font-size: 18px;
             letter-spacing: 2px;
             margin-bottom: 20px;
@@ -607,7 +605,7 @@
         .testimonial-card blockquote {
             font-size: 16px;
             line-height: 1.8;
-            color: var(--gray-700);
+            color: var(--warm-grey);
             margin-bottom: 24px;
             font-style: italic;
         }
@@ -621,7 +619,7 @@
         .testimonial-avatar {
             width: 48px; height: 48px;
             border-radius: 50%;
-            background: var(--green);
+            background: var(--gold);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -633,11 +631,11 @@
         .testimonial-name {
             font-weight: 700;
             font-size: 15px;
-            color: var(--black);
+            color: var(--white);
         }
         .testimonial-role {
             font-size: 13px;
-            color: var(--gray-500);
+            color: var(--warm-grey);
         }
 
         /* ─── WHY CHOOSE US ─── */
@@ -657,23 +655,23 @@
             display: flex;
             gap: 20px;
             padding: 32px;
-            border: 1px solid var(--gray-200);
+            border: 1px solid var(--card-border);
             border-radius: 12px;
-            background: var(--white);
+            background: var(--charcoal);
             transition: all 0.3s;
         }
         .why-card:hover {
-            box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.2);
         }
 
         .why-card h4 {
             font-size: 17px;
-            font-weight: 700;
+            font-weight: 600;
             margin-bottom: 6px;
         }
         .why-card p {
             font-size: 14px;
-            color: var(--gray-600);
+            color: var(--warm-grey);
             line-height: 1.6;
         }
 
@@ -690,7 +688,7 @@
         }
 
         .faq-item {
-            border-bottom: 1px solid var(--gray-200);
+            border-bottom: 1px solid var(--card-border);
         }
 
         .faq-question {
@@ -704,7 +702,7 @@
             padding: 24px 0;
             font-size: 17px;
             font-weight: 600;
-            color: var(--black);
+            color: var(--white);
             text-align: left;
             font-family: inherit;
         }
@@ -712,14 +710,14 @@
         .faq-icon {
             width: 28px; height: 28px;
             border-radius: 50%;
-            background: var(--gray-100);
+            background: var(--badge-bg);
             display: flex;
             align-items: center;
             justify-content: center;
             flex-shrink: 0;
             transition: transform 0.3s;
             font-size: 18px;
-            color: var(--gray-600);
+            color: var(--gold);
         }
 
         .faq-item.open .faq-icon { transform: rotate(45deg); }
@@ -736,14 +734,14 @@
 
         .faq-answer p {
             font-size: 15px;
-            color: var(--gray-600);
+            color: var(--warm-grey);
             line-height: 1.7;
         }
 
         /* ─── CTA SECTION ─── */
         .cta-section {
             padding: 100px 0;
-            background: var(--black);
+            background: var(--charcoal);
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -755,35 +753,35 @@
             top: -200px; left: 50%;
             transform: translateX(-50%);
             width: 600px; height: 600px;
-            background: radial-gradient(circle, rgba(255,255,255,0.03) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(185,125,15,0.06) 0%, transparent 70%);
         }
 
-        .cta-section .section-label { color: rgba(255,255,255,0.4); }
+        .cta-section .section-label { color: var(--gold); }
         .cta-section .section-title {
             color: var(--white);
             max-width: 640px;
             margin: 0 auto 20px;
         }
         .cta-section .section-subtitle {
-            color: rgba(255,255,255,0.6);
+            color: var(--warm-grey);
             margin: 0 auto 40px;
         }
 
         .cta-btn {
-            background: var(--green);
+            background: var(--gold);
             color: var(--white);
-            box-shadow: 0 2px 12px rgba(34,197,94,0.3);
+            box-shadow: 0 2px 12px rgba(185,125,15,0.3);
         }
         .cta-btn:hover {
-            background: var(--accent-hover);
+            background: var(--gold-light);
             transform: translateY(-1px);
-            box-shadow: 0 4px 20px rgba(34,197,94,0.4);
+            box-shadow: 0 4px 20px rgba(185,125,15,0.4);
         }
 
         .cta-guarantee {
             margin-top: 24px;
             font-size: 14px;
-            color: rgba(255,255,255,0.4);
+            color: var(--warm-grey);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -793,7 +791,7 @@
         /* ─── FOOTER ─── */
         .footer {
             padding: 60px 0 40px;
-            border-top: 1px solid var(--gray-200);
+            border-top: 1px solid var(--card-border);
         }
 
         .footer-inner {
@@ -806,7 +804,7 @@
 
         .footer-brand p {
             font-size: 14px;
-            color: var(--gray-500);
+            color: var(--warm-grey);
             max-width: 300px;
             margin-top: 12px;
             line-height: 1.6;
@@ -815,7 +813,7 @@
         .footer-links h5 {
             font-size: 13px;
             font-weight: 700;
-            color: var(--gray-400);
+            color: var(--gold);
             text-transform: uppercase;
             letter-spacing: 0.08em;
             margin-bottom: 16px;
@@ -826,18 +824,18 @@
         .footer-links ul li { margin-bottom: 10px; }
         .footer-links a {
             font-size: 14px;
-            color: var(--gray-600);
+            color: var(--warm-grey);
             text-decoration: none;
             transition: color 0.2s;
         }
-        .footer-links a:hover { color: var(--black); }
+        .footer-links a:hover { color: var(--white); }
 
         .footer-bottom {
             margin-top: 48px;
             padding-top: 24px;
-            border-top: 1px solid var(--gray-200);
+            border-top: 1px solid var(--card-border);
             font-size: 13px;
-            color: var(--gray-400);
+            color: var(--warm-grey);
             text-align: center;
         }
 
@@ -879,11 +877,11 @@
             display: none;
             position: fixed;
             top: 72px; left: 0; right: 0;
-            background: var(--white);
-            border-bottom: 1px solid var(--gray-200);
+            background: var(--charcoal);
+            border-bottom: 1px solid var(--card-border);
             padding: 24px;
             z-index: 999;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
         }
         .mobile-nav.open { display: block; }
         .mobile-nav a {
@@ -891,9 +889,9 @@
             padding: 12px 0;
             font-size: 16px;
             font-weight: 500;
-            color: var(--gray-700);
+            color: var(--warm-grey);
             text-decoration: none;
-            border-bottom: 1px solid var(--gray-100);
+            border-bottom: 1px solid var(--card-border);
         }
         .mobile-nav .btn {
             margin-top: 16px;
@@ -1138,7 +1136,7 @@
                 <div class="result-details">
                     <p>Scaled from £30K/mo to £80K/mo in 44 days with Meta Ads and Klaviyo flows. ROAS improved from 1.8x to 4.7x.</p>
                 </div>
-                <div style="font-size: 0.85rem; color: #999; margin-top: 8px;">Owner, Kieron Sparks</div>
+                <div style="font-size: 0.85rem; color: var(--warm-grey); margin-top: 8px;">Owner, Kieron Sparks</div>
             </div>
             <div class="result-card fade-up">
                 <img src="logos/hunter.png" alt="Hunter Boots logo" style="width: 80px; height: 80px; object-fit: contain; border-radius: 8px; margin-bottom: 12px;">
@@ -1305,25 +1303,25 @@
         <form class="fade-up" action="https://formspree.io/f/xjgpwqvo" method="POST" onsubmit="handleSubmit(event)" style="display:flex; flex-direction:column; gap:16px;">
             <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
                 <div>
-                    <label style="display:block; font-size:14px; font-weight:600; margin-bottom:6px; color:var(--gray-700);">First Name *</label>
-                    <input type="text" name="first_name" required placeholder="John" style="width:100%; padding:14px 16px; border:1px solid var(--gray-200); border-radius:10px; font-size:15px; font-family:inherit; outline:none; transition:border 0.2s;" onfocus="this.style.borderColor='var(--green)'" onblur="this.style.borderColor='var(--gray-200)'">
+                    <label style="display:block; font-size:14px; font-weight:600; margin-bottom:6px; color:var(--white);">First Name *</label>
+                    <input type="text" name="first_name" required placeholder="John" style="width:100%; padding:14px 16px; border:1px solid var(--card-border); border-radius:10px; font-size:15px; font-family:inherit; outline:none; transition:border 0.2s; background:var(--charcoal); color:var(--white);" onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='var(--card-border)'">
                 </div>
                 <div>
-                    <label style="display:block; font-size:14px; font-weight:600; margin-bottom:6px; color:var(--gray-700);">Last Name *</label>
-                    <input type="text" name="last_name" required placeholder="Smith" style="width:100%; padding:14px 16px; border:1px solid var(--gray-200); border-radius:10px; font-size:15px; font-family:inherit; outline:none; transition:border 0.2s;" onfocus="this.style.borderColor='var(--green)'" onblur="this.style.borderColor='var(--gray-200)'">
+                    <label style="display:block; font-size:14px; font-weight:600; margin-bottom:6px; color:var(--white);">Last Name *</label>
+                    <input type="text" name="last_name" required placeholder="Smith" style="width:100%; padding:14px 16px; border:1px solid var(--card-border); border-radius:10px; font-size:15px; font-family:inherit; outline:none; transition:border 0.2s; background:var(--charcoal); color:var(--white);" onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='var(--card-border)'">
                 </div>
             </div>
             <div>
-                <label style="display:block; font-size:14px; font-weight:600; margin-bottom:6px; color:var(--gray-700);">Email *</label>
-                <input type="email" name="email" required placeholder="john@yourbrand.com" style="width:100%; padding:14px 16px; border:1px solid var(--gray-200); border-radius:10px; font-size:15px; font-family:inherit; outline:none; transition:border 0.2s;" onfocus="this.style.borderColor='var(--green)'" onblur="this.style.borderColor='var(--gray-200)'">
+                <label style="display:block; font-size:14px; font-weight:600; margin-bottom:6px; color:var(--white);">Email *</label>
+                <input type="email" name="email" required placeholder="john@yourbrand.com" style="width:100%; padding:14px 16px; border:1px solid var(--card-border); border-radius:10px; font-size:15px; font-family:inherit; outline:none; transition:border 0.2s; background:var(--charcoal); color:var(--white);" onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='var(--card-border)'">
             </div>
             <div>
-                <label style="display:block; font-size:14px; font-weight:600; margin-bottom:6px; color:var(--gray-700);">Website URL *</label>
-                <input type="url" name="website" required placeholder="https://yourbrand.com" style="width:100%; padding:14px 16px; border:1px solid var(--gray-200); border-radius:10px; font-size:15px; font-family:inherit; outline:none; transition:border 0.2s;" onfocus="this.style.borderColor='var(--green)'" onblur="this.style.borderColor='var(--gray-200)'">
+                <label style="display:block; font-size:14px; font-weight:600; margin-bottom:6px; color:var(--white);">Website URL *</label>
+                <input type="url" name="website" required placeholder="https://yourbrand.com" style="width:100%; padding:14px 16px; border:1px solid var(--card-border); border-radius:10px; font-size:15px; font-family:inherit; outline:none; transition:border 0.2s; background:var(--charcoal); color:var(--white);" onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='var(--card-border)'">
             </div>
             <div>
-                <label style="display:block; font-size:14px; font-weight:600; margin-bottom:6px; color:var(--gray-700);">Monthly Revenue *</label>
-                <select name="monthly_revenue" required style="width:100%; padding:14px 16px; border:1px solid var(--gray-200); border-radius:10px; font-size:15px; font-family:inherit; outline:none; background:white; cursor:pointer; transition:border 0.2s;" onfocus="this.style.borderColor='var(--green)'" onblur="this.style.borderColor='var(--gray-200)'">
+                <label style="display:block; font-size:14px; font-weight:600; margin-bottom:6px; color:var(--white);">Monthly Revenue *</label>
+                <select name="monthly_revenue" required style="width:100%; padding:14px 16px; border:1px solid var(--card-border); border-radius:10px; font-size:15px; font-family:inherit; outline:none; background:var(--charcoal); color:var(--white); cursor:pointer; transition:border 0.2s;" onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='var(--card-border)'">
                     <option value="" disabled selected>Select your monthly revenue</option>
                     <option>Under $10K/mo</option>
                     <option>$10K - $50K/mo</option>
@@ -1333,13 +1331,13 @@
                 </select>
             </div>
             <div>
-                <label style="display:block; font-size:14px; font-weight:600; margin-bottom:6px; color:var(--gray-700);">What's your biggest growth challenge?</label>
-                <textarea name="challenge" rows="3" placeholder="E.g., struggling to scale Meta Ads profitably..." style="width:100%; padding:14px 16px; border:1px solid var(--gray-200); border-radius:10px; font-size:15px; font-family:inherit; outline:none; resize:vertical; transition:border 0.2s;" onfocus="this.style.borderColor='var(--green)'" onblur="this.style.borderColor='var(--gray-200)'"></textarea>
+                <label style="display:block; font-size:14px; font-weight:600; margin-bottom:6px; color:var(--white);">What's your biggest growth challenge?</label>
+                <textarea name="challenge" rows="3" placeholder="E.g., struggling to scale Meta Ads profitably..." style="width:100%; padding:14px 16px; border:1px solid var(--card-border); border-radius:10px; font-size:15px; font-family:inherit; outline:none; resize:vertical; background:var(--charcoal); color:var(--white); transition:border 0.2s;" onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='var(--card-border)'"></textarea>
             </div>
             <button type="submit" class="btn btn-primary" style="margin-top:8px; width:100%;">
                 Get My Free Growth Audit <span class="btn-arrow">&rarr;</span>
             </button>
-            <p style="text-align:center; font-size:13px; color:var(--gray-400); margin-top:4px;">
+            <p style="text-align:center; font-size:13px; color:var(--warm-grey); margin-top:4px;">
                 We'll respond within 48 hours. No spam, ever.
             </p>
         </form>
@@ -1433,7 +1431,7 @@
         }).then(r => {
             if (r.ok) {
                 btn.innerHTML = '<span style="display:inline-flex;align-items:center;gap:8px;">&#10003; Audit Request Sent!</span>';
-                btn.style.background = '#22c55e';
+                btn.style.background = '#B97D0F';
                 form.reset();
                 setTimeout(() => {
                     btn.innerHTML = 'Get My Free Growth Audit <span class="btn-arrow">&rarr;</span>';
