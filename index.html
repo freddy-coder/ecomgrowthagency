@@ -315,10 +315,10 @@
         .hero-proof-avatars img {
             width: 40px; height: 40px;
             border-radius: 50%;
-            border: 3px solid var(--charcoal);
+            border: 2px solid var(--card-border);
             margin-left: -10px;
             object-fit: cover;
-            background: var(--charcoal);
+            background: var(--white);
             box-shadow: 0 2px 6px rgba(0,0,0,0.3);
         }
         .hero-proof-avatars img:first-child { margin-left: 0; }
@@ -360,16 +360,17 @@
             flex-wrap: wrap;
         }
         .logos-grid img {
-            height: 40px;
+            height: 48px;
             width: auto;
             object-fit: contain;
-            opacity: 0.5;
-            transition: opacity 0.2s;
-            filter: grayscale(100%) brightness(2);
+            background: var(--white);
+            border-radius: 8px;
+            padding: 8px 16px;
+            opacity: 1;
+            transition: transform 0.2s;
         }
         .logos-grid img:hover {
-            opacity: 0.8;
-            filter: grayscale(0%) brightness(1.5);
+            transform: scale(1.05);
         }
 
         /* ─── STATS BAR ─── */
@@ -1129,7 +1130,7 @@
         </div>
         <div class="results-grid">
             <div class="result-card fade-up">
-                <img src="0x0.png" alt="Deluxe Fashion logo" style="width: 80px; height: 80px; object-fit: contain; border-radius: 8px; margin-bottom: 12px;">
+                <img src="0x0.png" alt="Deluxe Fashion logo" style="width: 80px; height: 80px; object-fit: contain; border-radius: 8px; margin-bottom: 12px; background: #FFFFFF; padding: 6px;">
                 <div class="result-brand">Deluxe Fashion</div>
                 <div class="result-metric">312%</div>
                 <div class="result-metric-label">Increase in Revenue</div>
@@ -1139,7 +1140,7 @@
                 <div style="font-size: 0.85rem; color: var(--warm-grey); margin-top: 8px;">Owner, Kieron Sparks</div>
             </div>
             <div class="result-card fade-up">
-                <img src="logos/hunter.png" alt="Hunter Boots logo" style="width: 80px; height: 80px; object-fit: contain; border-radius: 8px; margin-bottom: 12px;">
+                <img src="logos/hunter.png" alt="Hunter Boots logo" style="width: 80px; height: 80px; object-fit: contain; border-radius: 8px; margin-bottom: 12px; background: #FFFFFF; padding: 6px;">
                 <div class="result-brand">Hunter Boots</div>
                 <div class="result-metric">34%</div>
                 <div class="result-metric-label">Revenue Increase in Non-Peak Season</div>
@@ -1148,7 +1149,7 @@
                 </div>
             </div>
             <div class="result-card fade-up">
-                <img src="logos/neals-yard.png" alt="Neal's Yard Remedies logo" style="width: 80px; height: 80px; object-fit: contain; border-radius: 8px; margin-bottom: 12px;">
+                <img src="logos/neals-yard.png" alt="Neal's Yard Remedies logo" style="width: 80px; height: 80px; object-fit: contain; border-radius: 8px; margin-bottom: 12px; background: #FFFFFF; padding: 6px;">
                 <div class="result-brand">Neal's Yard Remedies</div>
                 <div class="result-metric">24%</div>
                 <div class="result-metric-label">Increase in Sales YoY</div>
